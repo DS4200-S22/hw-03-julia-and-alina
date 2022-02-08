@@ -3,12 +3,103 @@
 
 <head>
     <meta charset=utf-8/>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title> hw-03 </title>
+
 </head>
 
-
 <body>
-    hello world
+    <h1 id="header"> HTML+CSS & Marks+Channels </h1>
+    <div class="grid">
+        <div class="charts">
+            <img src="img/bubble_and_pie_chart.png"/>
+            <p class="text-padding"> 
+                <b>data types:</b> attribute (categorical) <br/>
+                <b>marks:</b> points (each pie chart on the graph, item), areas (each proportion of the pie chart, item) <br/>
+                <b>channels:</b> position (each pie chart on the graph is in a distinct place), 
+                area (the amount of area that is shaded in each pie chart),
+                color (each section of the pie chart)
+                  <br/>
+            </p>
+        </div>
+        <div class="charts">
+            <img src="img/bump_chart.png" />
+            <p class="text-padding"> 
+                <b>data types:</b> attribute, links <br/>
+                <b>marks:</b> points (node), lines (link) <br/>
+                <b>channels:</b> position, color,    <br/>
+            </p>
+        </div>
+        <div class="charts">
+            <img src="img/mind_map.png" />
+            <p class="text-padding"> 
+                <b>data types:</b> attributes (theme, category, idea). The data is not specified, but based on their
+                general categories it would make sense that these attributes would be categorical since there are ideas that
+                stem from themes/categories, categories that stem from themes, and themes that start off the mind map. There
+                are also links (the lines between attributes) that specify the relationship between each attribute.<br/>
+                <b>marks:</b> There are points (aka nodes) for the themes, categories, and ideas. There are also
+                connection marks that are represented by the links between nodes.<br/>
+                <b>channels:</b> <br/>
+            </p>
+        </div>
+        <div class="charts">
+            <img src="img/stacked_bar_chart.png" />
+            <p class="text-padding"> 
+                <b>data types:</b> attributes (A, B, C, D, 0 - 1000). Since the data is not specified, but each bar is grouped
+                into a category, it would make sense that they would be categorical attributes (levels: A, B, C, D).
+                Addtionally, there is some unspecified quantitative ordered attribute from values 0 - 1000.<br/>
+                <b>marks:</b> area (width (A, B, C, D) + height (0 - 1000))<br/>
+                <b>channels:</b> position - vertical, color - different shades of red, one shade of black,
+                shape - all rectangles, tilt - no tilt, size - length<br/>
+            </p>
+        </div>
+    </div>
+    <div class = "shapes">
+        <svg class = "rect">
+            <rect width="100" height="100"/>
+        </svg>
 
+        <svg class = "circle">
+            <circle cx="50" cy="50" r="50"/>
+        </svg>
+
+        <svg class = "rect">
+            <rect width="100" height="100"/>
+        </svg>
+
+        <svg class = "circle">
+            <circle cx="50" cy="50" r="50"/>
+        </svg>
+
+        <svg class = "rect">
+            <rect width="100" height="100"/>
+        </svg>
+
+        <svg class = "circle">
+            <circle cx="50" cy="50" r="50"/>
+        </svg>
+
+        <svg class = "rect">
+            <rect width="100" height="100"/>
+        </svg>
+    </div>
+    <h3 class = "footer">
+        Acknowledgements
+    </h3>
+    <div class = "acknowledgements">
+    <p class="text-padding"> 
+    </p>
+        <li class = "source">
+            <a href = "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> Flexbox </a>
+        </li>
+        <li class = "source">
+            <a href = "https://www.w3schools.com/html/html_links.asp"> HTML Links </a>
+        </li>
+        <li class = "source">
+            <a href = "https://www.w3schools.com/graphics/svg_rect.asp"> SVG Shapes </a>
+        </li>
+    <p class="text-padding"> 
+    </p>
+    </div>
 </body>
-
 </html>
