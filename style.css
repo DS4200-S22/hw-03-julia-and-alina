@@ -24,6 +24,7 @@ body {
     border-width: 5px;
     border-color: black;
     width: 450px;
+    height: auto;
 }
 
 .grid img {

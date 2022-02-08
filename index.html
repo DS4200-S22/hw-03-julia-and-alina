@@ -14,20 +14,20 @@
         <div class="charts">
             <img src="img/bubble_and_pie_chart.png"/>
             <p class="text-padding"> 
-                <b>data types:</b> attribute (categorical) <br/>
-                <b>marks:</b> points (each pie chart on the graph, item), areas (each proportion of the pie chart, item) <br/>
+                <b>data types:</b> attribute (categorical) <br/><br/>
+                <b>marks:</b> points (each pie chart on the graph, item), areas (each proportion of the pie chart, item) <br/><br/>
                 <b>channels:</b> position (each pie chart on the graph is in a distinct place), 
                 area (the amount of area that is shaded in each pie chart),
                 color (each section of the pie chart)
-                  <br/>
+                  <br/><br/>
             </p>
         </div>
         <div class="charts">
             <img src="img/bump_chart.png" />
             <p class="text-padding"> 
-                <b>data types:</b> attribute, links <br/>
-                <b>marks:</b> points (node), lines (link) <br/>
-                <b>channels:</b> position, color,    <br/>
+                <b>data types:</b> attribute, links <br/><br/>
+                <b>marks:</b> points (node), lines (link) <br/><br/>
+                <b>channels:</b> position, color,    <br/><br/>
             </p>
         </div>
         <div class="charts">
@@ -36,21 +36,32 @@
                 <b>data types:</b> attributes (theme, category, idea). The data is not specified, but based on their
                 general categories it would make sense that these attributes would be categorical since there are ideas that
                 stem from themes/categories, categories that stem from themes, and themes that start off the mind map. There
-                are also links (the lines between attributes) that specify the relationship between each attribute.<br/>
+                are also links (the lines between attributes) that specify the relationship between each attribute.<br/><br/>
                 <b>marks:</b> There are points (aka nodes) for the themes, categories, and ideas. There are also
-                connection marks that are represented by the links between nodes.<br/>
-                <b>channels:</b> <br/>
+                connection marks that are represented by the links between nodes.<br/><br/>
+                <b>channels:</b> The positions are both horizontal and vertical based on the location of each attribute.
+                The colors used range from different shades of red to dark blue. The theme attribute is dark blue
+                and the ideas and categories are different shades of red, likely dependent on what types of ideas/categories they are.
+                Additionally, all of the connections between nodes are black. The shapes are ovals for the nodes with no tilt and lines for the
+                connections between nodes with some tilt in order to connect the nodes. The area of all the nodes are the same, but
+                the length of the lines is dependent on the distance from node to node.<br/><br/>
             </p>
         </div>
         <div class="charts">
             <img src="img/stacked_bar_chart.png" />
             <p class="text-padding"> 
-                <b>data types:</b> attributes (A, B, C, D, 0 - 1000). Since the data is not specified, but each bar is grouped
-                into a category, it would make sense that they would be categorical attributes (levels: A, B, C, D).
-                Addtionally, there is some unspecified quantitative ordered attribute from values 0 - 1000.<br/>
-                <b>marks:</b> area (width (A, B, C, D) + height (0 - 1000))<br/>
-                <b>channels:</b> position - vertical, color - different shades of red, one shade of black,
-                shape - all rectangles, tilt - no tilt, size - length<br/>
+                <b>data types:</b> Since the data is not specified, but each bar is grouped
+                into a category, it would make sense that the categories would be categorical attributes (levels: A, B, C, D). Additionally,
+                the subcategories that are highlighted by different colors should be categorial attributes as well (levels: 
+                red-orange, red, dark red, dark blue)
+                Addtionally, there is some quantitative unspecified ordered attribute that has ordered levels from 0 - 1000.<br/><br/>
+                <b>marks:</b> The marks are areas with a fixed width for the attributes (A, B, C, D) and a height from ranges 0 - 1000 depending
+                on the quantitative unspecified ordered attribute.<br/><br/>
+                <b>channels:</b> The position of the channels is vertical for each stacked bar, horizontal for the way each bar is
+                lined up next to the other. For colors, each stack in the column is a different shades of red or one shade of dark blue
+                on the bottom stacks. The shapes are all rectangles that have no tilt and the size of
+                each bar is the area of the height (range 0 - 100) and the width (fixed value for each attribute). Additionally,
+                each rectangle is based on the amount of each smaller category.<br/><br/>
             </p>
         </div>
     </div>
