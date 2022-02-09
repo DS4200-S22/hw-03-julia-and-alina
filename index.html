@@ -14,51 +14,69 @@
         <div class="charts">
             <img src="img/bubble_and_pie_chart.png"/>
             <p class="text-padding"> 
-                <b>data types:</b> The data types included in this visualization include attribute (categorical) and item. 
-                The data is not specified, but the data within the pie charts is grouped into distinct caetgories,
-                which is what is being measured at different quantities that are represented
-                as portions on the pie charts. Each pie chart itself is an item on the visualization. <br/><br/>
-                <b>marks:</b> The marks in this visualization include: points (each pie chart on the graph, item),
-                 areas (each proportion of the pie chart, item) <br/><br/>
-                <b>channels:</b> The channels included in this visualization include 
-                Position: (each pie chart on the graph is in a distinct place), 
-                Area (the amount of area that is shaded in each pie chart), 
-                Color (each section of the pie chart), and Tilt (the angle that the pie charts divide their
-                sections as).<br/><br/>
+                <b>data types:</b> The data types included in this visualization include attribute (categorical, quantatative) and item. 
+                The data is not specified, but the data within the pie charts is split based on a quantatative, ordered percentage attribute with levels from 0-100%.
+                Additionally, each pie chart represents an attribute that can be split via percentages.
+                Each pie chart itself is an item on the visualization. There are also three other instances of quantatative,
+                ordered data along the x and y axes that determines the position of the pie charts on the graph (levels: 0-1000 for the y-axis and
+                0-10 for the x-axis), and a quantatative attribute that determines the size of each bubble marker (levels: size in relation to a given parameter).<br/><br/>
+                <b>marks:</b> The marks in this visualization include: points (each pie chart on the graph is an item/node),
+                 areas (each proportion of the pie chart, and the size of each bubble marker) <br/><br/>
+                <b>channels:</b> The channels of this compound bubble and pie chart control the appearance of the marks mentioned above with position,
+                color, shape, tilt, and size. The position of the marks are both horizontal and vertical and determined by the quantatative, ordered data
+                along the x and y axes. The color of each section of the pie chart is determined based on the distinct categories within each pie chart.
+                Additionally, all of the pie charts are circular, but there are different sizes for each bubble marker which is determined by a
+                a quantatative attribute. Each section of each pie chart has a different level of tilt depending on each location as well.
+                As stated before, the size of each pie chart (area) is determined by a quantatative attribute and the size of each
+                section is determined by a quantatative % attribute.
             </p>
         </div>
         <div class="charts">
             <img src="img/bump_chart.png" />
             <p class="text-padding"> 
                 <b>data types:</b> The data types included in this visualization
-                include items, links, categories  and attributes. The items are the noted
-                by the numbers on the left (1,2,3,4,5) and the attributes (categorical) are each point 
-                for each item at each year. The categories are noted by the letters (A,B,C,D,E) 
-                and represeny a category that is the state of the items at a certain time.
+                are links and attributes. The ordinal attributes are noted
+                by the numbers on the left (levels: 1,2,3,4,5) and the attributes (categorical) are each point 
+                for each item at each year (the year attributes have levels from 2005, 2015, 2015, 2015).
+                The categories are noted by the letters (levels: A,B,C,D,E) 
+                and represent a category that is the state of the items at a certain time.
                 The links are the lines that connect the points, indicating that each point 
-                connected by the line is the same attribute for an item at a different time. <br/><br/>
+                connected by the line is the same attribute for an item at a different time. 
+                Additionally, there is a categorical attribute that sorts each point into different groups of four nodes
+                and affects the color channel of each point. This attribute represents the change in rank over time.<br/><br/>
                 <b>marks:</b> The marks included are points (node), lines (link). The lines connect the 
-                points together.  <br/><br/>
-                <b>channels:</b> The channels include Position (where each point is on the visualization
-                represents the status of it) and Color (when multiple points are the same color and
-                are connected to each other by a line that is the same color, it indicates that
-                that they are the same point at different levels at different years.)    <br/><br/>
+                points together based on their relationship to one another.<br/><br/>
+                <b>channels:</b>
+                The channels of this bump chart control the appearance of the marks mentioned above with position,
+                color, shape, tilt, and size. The position of each node is both horizontal and vertical based on the
+                rank attributes (A, B, C, D, E, 1, 2, 3, 4, 5, and 2005, 2015, 2015, 2015) and is formatted in a grid-like
+                fashion where there is a node that corresponds with each x and y-axis attribute. The colors of each node
+                are determined based on an unspecified attribute which groups various nodes into categories (i.e. red-orange,
+                dark blue, and dark red). Each set of four connected nodes all have the same colored nodes and links within
+                their group. All of the nodes are circles and all of the links are lines to easily display the changes in rank
+                over time. Additionally, the tilt of the nodes are none and the tilt of the links are based on each node's connection
+                to another node. The size of all the nodes are uniform and the length of each link is based on the distance from
+                one node to another.<br/><br/>
             </p>
         </div>
         <div class="charts">
             <img src="img/mind_map.png" />
             <p class="text-padding"> 
-                <b>data types:</b> attributes (theme, category, idea). The data is not specified, but based on their
+                <b>data types:</b> The attributes include theme, category, idea. The data is not specified, but based on their
                 general categories it would make sense that these attributes would be categorical since there are ideas that
                 stem from themes/categories, categories that stem from themes, and themes that start off the mind map. There
-                are also links (the lines between attributes) that specify the relationship between each attribute.<br/><br/>
+                are also links (the lines between attributes) that specify the relationship between each attribute. Additionally,
+                another potential categorical attribute could sort different ideas based on common categories.<br/><br/>
                 <b>marks:</b> There are points (used as nodes) for the themes, categories, and ideas. There are also
                 connection marks that are represented by the links between nodes.<br/><br/>
-                <b>channels:</b> The positions are both horizontal and vertical based on the location of each attribute.
-                The colors used range from different shades of red to dark blue. The theme attribute is dark blue
+                <b>channels:</b> The channels of this mind map control the appearance of the marks mentioned above with position,
+                color, shape, tilt, and size. The positions of the nodes are both horizontal and vertical based on the location of each attribute,
+                since each concept stems from another, the positions of nodes must be relative to other similar nodes. Additionally, the positions of the
+                links are determined based on which concepts relate to others.
+                The colors used range from different shades of red to dark blue based on whether the node is a theme, idea, or category. The theme attribute is dark blue
                 and the ideas and categories are different shades of red, likely dependent on what types of ideas/categories they are.
-                Additionally, all of the connections between nodes are black. The shapes are ovals for the nodes with no tilt and lines for the
-                connections between nodes with some tilt in order to connect the nodes. The area of all the nodes are the same, but
+                Additionally, all of the connections between nodes are dark blue. The shapes of the nodes are ovals with no tilt and lines for the
+                connections between nodes with some tilt in order to connect the correct nodes. The area of all the nodes are the same, but
                 the length of the lines is dependent on the distance from node to node.<br/><br/>
             </p>
         </div>
@@ -66,17 +84,19 @@
             <img src="img/stacked_bar_chart.png" />
             <p class="text-padding"> 
                 <b>data types:</b> Since the data is not specified, but each bar is grouped
-                into a category, it would make sense that the categories would be categorical attributes (levels: A, B, C, D). Additionally,
+                into a category, it would make sense that the larger categories would be categorical attributes (levels: A, B, C, D). Additionally,
                 the subcategories that are highlighted by different colors should be categorial attributes as well (levels: 
-                red-orange, red, dark red, dark blue)
-                Addtionally, there is some quantitative unspecified ordered attribute that has ordered levels from 0 - 1000.<br/><br/>
-                <b>marks:</b> The marks are areas with a fixed width for the attributes (A, B, C, D) and a height from ranges 0 - 1000 depending
-                on the quantitative unspecified ordered attribute. These marks are used as nodes.<br/><br/>
-                <b>channels:</b> The position of the channels is vertical for each stacked bar, horizontal for the way each bar is
-                lined up next to the other. For colors, each stack in the column is a different shades of red or one shade of dark blue
-                on the bottom stacks. The shapes are all rectangles that have no tilt and the size of
+                red-orange, red, dark red, dark blue). There is also an unspecified quantitative ordered attribute that has ordered levels from 0 - 1000
+                and represents a total amount of something.<br/><br/>
+                <b>marks:</b> The marks for each subcategory are areas with a fixed width for the attributes (A, B, C, D) and a height from ranges 0 - 1000 depending
+                on the quantitative unspecified ordered attribute. These marks are used as nodes. The overall bar chart for main categories also
+                has a fixed width and a height dependent of the unspecified quantitative ordered attribute (levels: 0-1000) and is a node.<br/><br/>
+                <b>channels:</b> The channels of this stacked bar chart control the appearance of the marks mentioned above with position,
+                color, shape, tilt, and size. The position of the subcategory and main category nodes are vertical for each stacked bar, horizontal for the way each main category bar is
+                lined up next to the other. For colors, each stack in the column is a different shade of red or one shade of dark blue
+                on the bottom stacks in order to distinguish the subcategories within each main category. The shapes of the subcategory and main category nodes are all rectangles that have no tilt and the size of
                 each bar is the area of the height (range 0 - 100) and the width (fixed value for each attribute). Additionally,
-                each rectangle is based on the amount of each smaller category.<br/><br/>
+                the size of the category bar is based on the total area of each subcategory.<br/><br/>
             </p>
         </div>
     </div>
